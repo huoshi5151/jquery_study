@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>表单对象属性选择器</title>
+	<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		
+	});
+	</script>
+</head>
+<body>
+	<form action="" id="form">
+		可用元素<input type="text" name="add" value="可用文本框"/><br/>
+		不可用元素<input type="text" name="email" disabled="disabled" value="不可用文本框"/><br/>
+		可用元素<input type="text" name="che" value="可用文本框"/><br/>
+		不可用元素<input type="text" name="name" disabled="disabled" value="不可用文本框"/><br/>
+		多选框<br/>
+		<input type="checkbox" name="newsletter" checked="checked" id="" value="test1" />test1
+		<input type="checkbox" name="newsletter" value="test2" id="" />test2
+		<input type="checkbox" name="newsletter" value="test3" id="" />test3
+		<input type="checkbox" name="newsletter" value="test4" id="" checked="checked"/>test4
+		<input type="checkbox" name="newsletter" value="test5" id="" />test5
+		<div></div>
+		<br /><br />
+		下拉列表1：<br />
+		<select name="test" multiple="multiple" style="height:100px" id="">
+			<option value=""></option>
+		</select>
+	</form>
+</body>
+</html>

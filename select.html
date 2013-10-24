@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>jquery选择器联系操作</title>
+	<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+	
+	<style>
+		div,span,p{
+			width:140px;
+			height: 140px;
+			margin: 5px;
+			background: #aaa;
+			border: #000 1px solid;
+			float: left;
+			font-size: 17px;
+			font-family: Verdana;
+		}
+		div.mini{
+			width: 55px;
+			height: 55px;
+			background-color: #aaa;
+			font-size: 12px;
+		}
+		div.hide{
+			display: none;
+		}
+	</style>
+	<script>
+		$(function() {
+			// $('#one').css('background', '#bbffaa');
+			// $('.mini').css('background', '#bbffaa');
+			// $('div').css('background', '#bbffaa');
+			// $('*').css('background', '#bbffaa');
+			// $('span,#two').css('background', '#bbffaa');
+			
+			// $('body div').css('background', '#bbffaa');
+			// $('body>div').css('background', '#bbffaa');
+			// 改变class为one的下一个div同辈元素的背景颜色
+			// $('.one+div').css('background', '#bbffaa');
+			// next()方法代替$('.one+div')
+			// $('.one').next('div').css('background', '#bbffaa');
+			// 改变class为one的元素后面的所有div同辈元素的背景颜色		
+			// $('.one~div').css('background', '#bbffaa');
+			// $('#two').nextAll('div')代替上面的$('.one~div')
+			// $('#two').nextAll('div').css('background', '#bbffaa');
+			// siblings不区分前后，只要是同辈都被选中
+			// $('#two').siblings('div').css('background', '#bbffaa');
+			// $(':header').css('background', '#bbffaa');
+			
+		// 包含文本'di'的div
+			// $('div:contains(di);').css('background', '#bbffaa');
+			// 寻去不包含子元素的div
+			// $('div:empty').css('background', '#bbffaa');
+			// 改变含有class为mini元素的div元素
+			// $("div:has('.mini')").css('background', '#bbffaa');
+			// $("div:parent").css('background', '#bbffaa');
+			
+			// 改变所有可见的div的背景色
+			// $("div:visible").css('background', '#bbffaa');
+			// 显示隐藏的div元素
+			// $("div:hidden").show(3000);
+			
+			// 属性过滤选择器
+			// $("div[title]").css('background', '#bbffaa');
+			// $("div[title=test]").css('background', '#bbffaa');
+			// $("div[title!=test]").css('background', '#bbffaa');
+			// $("div[title^=ot]").css('background', '#bbffaa');			
+			// $("div[title$=est]").css('background', '#bbffaa');
+			// $("div[title*=es]").css('background', '#bbffaa');
+			// 复合选择器
+			// $("div[id][title*=es]").css('background', '#bbffaa');
+			
+			//子元素过滤选择器
+			 // $("div.one :nth-child(2)").css('background', '#bbffaa');
+			 // $("div.one :first-child").css('background', '#bbffaa');
+			 // $("div.one :last-child").css('background', '#bbffaa');
+			 // $("div.one :only-child").css('background', '#bbffaa');
+		});
+	</script>
+</head>
+<body>
+	<h1>jquery选择器</h1>
+	<div class="one" id="one">
+	id为one，class为one的div
+		<div class="mini">class为mini</div>
+	</div>
+	<div class="one" id="two" title="test">id为two,class为one,title为test的div
+		<div class="mini" title="other">class为mini，title为other</div>
+		<div class="mini" title="test">class为mini,title为test</div>
+	</div>
+	<div class="one">
+		<div class="mini">class为mini</div>
+		<div class="mini">class为mini</div>
+		<div class="mini">class为mini</div>
+		<div class="mini"></div>
+	</div>
+	<div class="one">
+		<div class="mini">class为mini</div>
+		<div class="mini">class为mini</div>
+		<div class="mini">class为mini</div>
+		<div class="mini" title="test">class为mini,title为test</div>
+	</div>
+	<div style="display:none" class="one">style的display为"none"的div</div>
+	<div class="hide">class为hide的div</div>
+	<div>包含input的type为"hidden"的div<input type="hidden" name="" size="8" /></div>
+	<span id="mover">正在执行动画的span元素</span>
+</body>
+</html>
